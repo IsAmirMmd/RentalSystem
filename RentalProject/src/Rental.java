@@ -1,20 +1,22 @@
 import java.lang.reflect.Constructor;
-import java.sql.Date;
+import java.util.Date;
 
 public class Rental {
-    public int ID;
+    public long ID;
     public Movie movie;
     public Customer customer;
     public Date rentalDate;
     public Date returnDate;
 
-    public Rental(Movie movie, Customer customer, int ID) {
+    public Rental(Movie movie, Customer customer, long ID) {
         this.ID = ID;
         this.movie = movie;
         this.customer = customer;
+        movie.isAvailable = false;
+        this.rentalDate = new Date();
     }
 
-    public int getID() {
+    public long getID() {
         return ID;
     }
 
