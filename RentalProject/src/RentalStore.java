@@ -35,7 +35,7 @@ public class RentalStore {
         String ID = Long.toString(movie.ID) + Long.toString(customer.ID);
         long castID = Long.parseLong(ID);
         if (movie.isAvailable == true) {
-            Rental rental = new Rental(movie, customer, castID);
+            new Rental(movie, customer, castID);
         }
     }
 
