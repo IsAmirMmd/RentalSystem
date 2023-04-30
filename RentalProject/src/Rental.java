@@ -1,4 +1,3 @@
-import java.lang.reflect.Constructor;
 import java.util.Date;
 
 public class Rental {
