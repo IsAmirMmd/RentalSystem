@@ -1,4 +1,3 @@
-import java.sql.Date;
 import java.util.ArrayList;
 
 public class Customer {
@@ -15,6 +14,11 @@ public class Customer {
         this.email = email;
         this.phone = phone;
         this.address = address;
+        for (Rental temp : RentalStore.rentalList) {
+            if (temp.customer.ID == this.ID) {
+                this.rentals.add(temp);
+            }
+        }
     }
 
     public int getID() {

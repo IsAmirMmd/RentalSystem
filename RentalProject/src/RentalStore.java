@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class RentalStore {
     public static ArrayList<Customer> memberStore = new ArrayList<>();
     public static ArrayList<Movie> movieList = new ArrayList<>();
+    public static ArrayList<Rental> rentalList = new ArrayList<>();
 
     public static void register(Customer customer) {
         memberStore.add(customer);
@@ -35,7 +36,8 @@ public class RentalStore {
         String ID = Long.toString(movie.ID) + Long.toString(customer.ID);
         long castID = Long.parseLong(ID);
         if (movie.isAvailable == true) {
-            new Rental(movie, customer, castID);
+            Rental rental = new Rental(movie, customer, castID);
+            rentalList.add(rental);
         }
     }
 
