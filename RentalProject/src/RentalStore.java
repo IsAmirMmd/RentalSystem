@@ -21,10 +21,10 @@ public class RentalStore {
         }
     }
 
-    public static void getAvailable() {
+    public static void getAvailableMovies() {
         System.out.println("**** here is list of available movies you can rent : ****");
+        int i = 1;
         for (Movie movie : movieList) {
-            int i = 1;
             if (movie.isAvailable == true)
                 System.out.println(
                         i + ". " + movie.title + " by " + movie.director + " and it's genre is " + movie.genre);
@@ -38,6 +38,7 @@ public class RentalStore {
         if (movie.isAvailable == true) {
             Rental rental = new Rental(movie, customer, castID);
             rentalList.add(rental);
+            System.out.println(movie.getTitle() + " rented");
         }
     }
 
@@ -47,7 +48,6 @@ public class RentalStore {
     }
 
     public static Customer getCustomerById(long ID) {
-
         Customer tempCustomer = null;
         Boolean isExisted = false;
         for (Customer temp : memberStore) {
@@ -58,12 +58,16 @@ public class RentalStore {
         }
         if (!isExisted) {
             System.out.println("we don't have any user with this ID");
+        } else {
+            System.out.println("user name is " + tempCustomer.name);
+            System.out.println("user email is " + tempCustomer.email);
+            System.out.println("user phone is " + tempCustomer.phone);
+            tempCustomer.getRentals();
         }
         return tempCustomer;
     }
 
     public static Movie getMovieById(long ID) {
-
         Movie tempMovie = null;
         Boolean isExisted = false;
         for (Movie temp : movieList) {
@@ -74,6 +78,11 @@ public class RentalStore {
         }
         if (!isExisted) {
             System.out.println("we don't have any movie with this ID");
+        } else {
+            System.out.println("movie title is " + tempMovie.title);
+            System.out.println("movie director is " + tempMovie.director);
+            System.out.println("movie genre is " + tempMovie.genre);
+            System.out.println("movie cast is " + tempMovie.cast);
         }
         return tempMovie;
     }
