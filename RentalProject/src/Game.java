@@ -1,13 +1,9 @@
 import java.util.Date;
 
 public class Game extends Item {
-    public String title;
-    public String genre;
     public String platform;
     public String publisher;
-    public Date releaseDate;
     public Boolean isAvailable;
-    public long ID;
 
     public Game(String title, String genre, String platform, String publisher, Date releaseDate, long ID) {
         super(title, genre, releaseDate, ID);

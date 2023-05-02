@@ -2,13 +2,9 @@ import java.util.Date;
 
 class Book extends Item {
 
-    public String title;
-    public String genre;
     public String author;
     public String publisher;
-    public Date releaseDate;
     public Boolean isAvailable;
-    public long ID;
 
     public Book(String title, String genre, String author, String publisher, Date releaseDate, long ID) {
         super(title, genre, releaseDate, ID);
