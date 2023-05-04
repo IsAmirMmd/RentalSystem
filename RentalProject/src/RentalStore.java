@@ -3,6 +3,8 @@ import java.util.ArrayList;
 public class RentalStore {
     public static ArrayList<Customer> memberStore = new ArrayList<>();
     public static ArrayList<Movie> movieList = new ArrayList<>();
+    public static ArrayList<Game> gameList = new ArrayList<>();
+    public static ArrayList<Book> bookList = new ArrayList<>();
     public static ArrayList<Rental> rentalList = new ArrayList<>();
 
     public static void register(Customer customer) {
@@ -11,6 +13,14 @@ public class RentalStore {
 
     public static void addMovie(Movie movie) {
         movieList.add(movie);
+    }
+
+    public static void addGame(Game game) {
+        gameList.add(game);
+    }
+
+    public static void addBook(Book book) {
+        bookList.add(book);
     }
 
     public static void removeMovie(Movie movie) {
@@ -28,6 +38,28 @@ public class RentalStore {
             if (movie.isAvailable == true)
                 System.out.println(
                         i + ". " + movie.title + " by " + movie.director + " and it's genre is " + movie.genre);
+            i++;
+        }
+    }
+
+    public static void getAvailableGames() {
+        System.out.println("**** here is list of available Games you can rent : ****");
+        int i = 1;
+        for (Game game : gameList) {
+            if (game.isAvailable == true)
+                System.out.println(
+                        i + ". " + game.title + " by " + game.publisher + " and it's genre is " + game.genre);
+            i++;
+        }
+    }
+
+    public static void getAvailableBooks() {
+        System.out.println("**** here is list of available Books you can rent : ****");
+        int i = 1;
+        for (Book book : bookList) {
+            if (book.isAvailable == true)
+                System.out.println(
+                        i + ". " + book.title + " by " + book.author + " and it's genre is " + book.genre);
             i++;
         }
     }
