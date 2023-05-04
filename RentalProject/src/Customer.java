@@ -38,13 +38,18 @@ public class Customer {
     }
 
     public ArrayList<Rental> getRentals() {
-        System.out.println(this.name + " rent this book :");
+        System.out.println(this.name + " rent these item :");
         rentals = new ArrayList<>();
         int i = 1;
         for (Rental temp : RentalStore.rentalList) {
             if (temp.customer.ID == this.ID) {
                 rentals.add(temp);
-                System.out.println(i + ". " + temp.movie.title);
+                if (temp.movie == null && temp.game == null)
+                    System.out.println(i + ". the book : " + temp.book.title);
+                else if (temp.movie == null && temp.book == null)
+                    System.out.println(i + ". the game : " + temp.game.title);
+                else if (temp.game == null && temp.book == null)
+                    System.out.println(i + ". the movie : " + temp.movie.title);
                 i++;
             }
         }
