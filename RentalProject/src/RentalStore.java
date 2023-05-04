@@ -47,6 +47,36 @@ public class RentalStore {
         tempMovie.isAvailable = true;
     }
 
+    public static void rentBook(Book book, Customer customer) {
+        String ID = Long.toString(book.ID) + Long.toString(customer.ID);
+        long castID = Long.parseLong(ID);
+        if (book.isAvailable == true) {
+            Rental rental = new Rental(book, customer, castID);
+            rentalList.add(rental);
+            System.out.println(book.getTitle() + " rented");
+        }
+    }
+
+    public static void returnBook(Rental rental) {
+        Book tempBook = rental.book;
+        tempBook.isAvailable = true;
+    }
+
+    public static void rentGame(Game game, Customer customer) {
+        String ID = Long.toString(game.ID) + Long.toString(customer.ID);
+        long castID = Long.parseLong(ID);
+        if (game.isAvailable == true) {
+            Rental rental = new Rental(game, customer, castID);
+            rentalList.add(rental);
+            System.out.println(game.getTitle() + " rented");
+        }
+    }
+
+    public static void returnGame(Rental rental) {
+        Game tempGame = rental.game;
+        tempGame.isAvailable = true;
+    }
+
     public static Customer getCustomerById(long ID) {
         Customer tempCustomer = null;
         Boolean isExisted = false;
