@@ -3,6 +3,8 @@ import java.util.Date;
 public class Rental {
     public long ID;
     public Movie movie;
+    public Book book;
+    public Game game;
     public Customer customer;
     public Date rentalDate;
     public Date returnDate;
@@ -15,12 +17,36 @@ public class Rental {
         this.rentalDate = new Date();
     }
 
+    public Rental(Game game, Customer customer, long ID) {
+        this.ID = ID;
+        this.game = game;
+        this.customer = customer;
+        game.isAvailable = false;
+        this.rentalDate = new Date();
+    }
+
+    public Rental(Book book, Customer customer, long ID) {
+        this.ID = ID;
+        this.book = book;
+        this.customer = customer;
+        book.isAvailable = false;
+        this.rentalDate = new Date();
+    }
+
     public long getID() {
         return ID;
     }
 
     public Movie getMovie() {
         return movie;
+    }
+
+    public Game getGame() {
+        return game;
+    }
+
+    public Book getBook() {
+        return book;
     }
 
     public Customer getCustomer() {
