@@ -1,3 +1,5 @@
+package org.example;
+
 import java.util.Date;
 
 public class Rental {
@@ -12,7 +14,7 @@ public class Rental {
     public Rental(Movie movie, Customer customer, long ID) {
         this.ID = ID;
         this.movie = movie;
-        this.customer = customer;
+        this.customer = new Customer(customer.name,customer.email,customer.phone,customer.address,customer.getID());
         movie.isAvailable = false;
         this.rentalDate = new Date();
     }
@@ -20,7 +22,7 @@ public class Rental {
     public Rental(Game game, Customer customer, long ID) {
         this.ID = ID;
         this.game = game;
-        this.customer = customer;
+        this.customer = new Customer(customer.name,customer.email,customer.phone,customer.address,customer.getID());
         game.isAvailable = false;
         this.rentalDate = new Date();
     }
@@ -28,7 +30,7 @@ public class Rental {
     public Rental(Book book, Customer customer, long ID) {
         this.ID = ID;
         this.book = book;
-        this.customer = customer;
+        this.customer = new Customer(customer.name,customer.email,customer.phone,customer.address,customer.getID());
         book.isAvailable = false;
         this.rentalDate = new Date();
     }

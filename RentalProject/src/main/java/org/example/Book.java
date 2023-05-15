@@ -1,10 +1,9 @@
+package org.example;
 import java.util.Date;
 
 class Book extends Item {
-
     public String author;
     public String publisher;
-    public Boolean isAvailable;
 
     public Book(String title, String genre, String author, String publisher, Date releaseDate, long ID) {
         super(title, genre, releaseDate, ID);

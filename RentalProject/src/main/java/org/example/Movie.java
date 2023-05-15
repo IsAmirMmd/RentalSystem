@@ -1,9 +1,10 @@
+package org.example;
+
 import java.util.Date;
 
 class Movie extends Item {
     public String director;
     public String cast;
-    public Boolean isAvailable;
 
     public Movie(String title, String genre, String director, String cast, Date releaseDate, long ID) {
         super(title, genre, releaseDate, ID);

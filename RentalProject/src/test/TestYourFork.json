@@ -1,0 +1,391 @@
+{
+  "customers": [
+    {
+      "ID": 1,
+      "name": "John Smith",
+      "email": "johnsmith@example.com",
+      "phone": "1234567890",
+      "address": "123 Main Street",
+      "rentals": [
+        {
+          "ID": 61,
+          "book": {
+            "author": "F. Scott Fitzgerald",
+            "publisher": "Charles Scribner\u0027s Sons",
+            "isAvailable": false,
+            "title": "The Great Gatsby",
+            "genre": "Fiction",
+            "releaseDate": "Apr 10, 1925, 12:00:00 AM",
+            "ID": 6
+          },
+          "customer": {
+            "ID": 1,
+            "name": "John Smith",
+            "email": "johnsmith@example.com",
+            "phone": "1234567890",
+            "address": "123 Main Street",
+            "rentals": []
+          },
+          "rentalDate": "May 15, 2023, 10:09:31 PM"
+        }
+      ]
+    },
+    {
+      "ID": 2,
+      "name": "Emily Johnson",
+      "email": "emilyjohnson@example.com",
+      "phone": "9876543210",
+      "address": "456 Oak Avenue",
+      "rentals": [
+        {
+          "ID": 12,
+          "book": {
+            "author": "Alice Thompson",
+            "publisher": "Penguin Books",
+            "isAvailable": false,
+            "title": "The Secret Garden",
+            "genre": "Fiction",
+            "releaseDate": "Mar 15, 2022, 12:00:00 AM",
+            "ID": 1
+          },
+          "customer": {
+            "ID": 2,
+            "name": "Emily Johnson",
+            "email": "emilyjohnson@example.com",
+            "phone": "9876543210",
+            "address": "456 Oak Avenue",
+            "rentals": []
+          },
+          "rentalDate": "May 15, 2023, 10:09:31 PM"
+        },
+        {
+          "ID": 72,
+          "book": {
+            "author": "J.K. Rowling",
+            "publisher": "Bloomsbury Publishing",
+            "isAvailable": false,
+            "title": "Harry Potter and the Philosopher\u0027s Stone",
+            "genre": "Fantasy",
+            "releaseDate": "Jun 26, 1997, 12:00:00 AM",
+            "ID": 7
+          },
+          "customer": {
+            "ID": 2,
+            "name": "Emily Johnson",
+            "email": "emilyjohnson@example.com",
+            "phone": "9876543210",
+            "address": "456 Oak Avenue",
+            "rentals": []
+          },
+          "rentalDate": "May 15, 2023, 10:09:31 PM"
+        }
+      ]
+    },
+    {
+      "ID": 3,
+      "name": "Michael Brown",
+      "email": "michaelbrown@example.com",
+      "phone": "5555555555",
+      "address": "789 Elm Street",
+      "rentals": [
+        {
+          "ID": 43,
+          "book": {
+            "author": "Harper Lee",
+            "publisher": "J. B. Lippincott \u0026 Co.",
+            "isAvailable": false,
+            "title": "To Kill a Mockingbird",
+            "genre": "Classic",
+            "releaseDate": "Jul 11, 1960, 12:00:00 AM",
+            "ID": 4
+          },
+          "customer": {
+            "ID": 3,
+            "name": "Michael Brown",
+            "email": "michaelbrown@example.com",
+            "phone": "5555555555",
+            "address": "789 Elm Street",
+            "rentals": []
+          },
+          "rentalDate": "May 15, 2023, 10:09:31 PM"
+        }
+      ]
+    }
+  ],
+  "books": [
+    {
+      "author": "Alice Thompson",
+      "publisher": "Penguin Books",
+      "isAvailable": false,
+      "title": "The Secret Garden",
+      "genre": "Fiction",
+      "releaseDate": "Mar 15, 2022, 12:00:00 AM",
+      "ID": 1
+    },
+    {
+      "author": "Benjamin Martin",
+      "publisher": "HarperCollins",
+      "isAvailable": true,
+      "title": "The Alchemist",
+      "genre": "Fantasy",
+      "releaseDate": "Jul 1, 2021, 12:00:00 AM",
+      "ID": 2
+    },
+    {
+      "author": "Jane Austen",
+      "publisher": "Thomas Egerton",
+      "isAvailable": false,
+      "title": "pride and Prejudice",
+      "genre": "Romance",
+      "releaseDate": "Jan 28, 1813, 12:00:00 AM",
+      "ID": 3
+    },
+    {
+      "author": "Harper Lee",
+      "publisher": "J. B. Lippincott \u0026 Co.",
+      "isAvailable": false,
+      "title": "To Kill a Mockingbird",
+      "genre": "Classic",
+      "releaseDate": "Jul 11, 1960, 12:00:00 AM",
+      "ID": 4
+    },
+    {
+      "author": "George Orwell",
+      "publisher": "Secker \u0026 Warburg",
+      "isAvailable": true,
+      "title": "1984",
+      "genre": "Dystopian",
+      "releaseDate": "Jun 8, 1949, 12:00:00 AM",
+      "ID": 5
+    },
+    {
+      "author": "F. Scott Fitzgerald",
+      "publisher": "Charles Scribner\u0027s Sons",
+      "isAvailable": false,
+      "title": "The Great Gatsby",
+      "genre": "Fiction",
+      "releaseDate": "Apr 10, 1925, 12:00:00 AM",
+      "ID": 6
+    },
+    {
+      "author": "J.K. Rowling",
+      "publisher": "Bloomsbury Publishing",
+      "isAvailable": false,
+      "title": "Harry Potter and the Philosopher\u0027s Stone",
+      "genre": "Fantasy",
+      "releaseDate": "Jun 26, 1997, 12:00:00 AM",
+      "ID": 7
+    },
+    {
+      "author": "J.R.R. Tolkien",
+      "publisher": "George Allen \u0026 Unwin",
+      "isAvailable": true,
+      "title": "The Hobbit",
+      "genre": "Fantasy",
+      "releaseDate": "Sep 21, 1937, 12:00:00 AM",
+      "ID": 8
+    },
+    {
+      "author": "J.D. Salinger",
+      "publisher": "Little, Brown and Company",
+      "isAvailable": false,
+      "title": "The Catcher in the Rye",
+      "genre": "Coming-of-age",
+      "releaseDate": "Jul 16, 1951, 12:00:00 AM",
+      "ID": 9
+    },
+    {
+      "author": "C.S. Lewis",
+      "publisher": "Geoffrey Bles",
+      "isAvailable": true,
+      "title": "The Chronicles of Narnia: The Lion, the Witch, and the Wardrobe",
+      "genre": "Fantasy",
+      "releaseDate": "Oct 16, 1950, 12:00:00 AM",
+      "ID": 10
+    }
+  ],
+  "games": [
+    {
+      "platform": "Nintendo",
+      "publisher": "Shigeru Miyamoto",
+      "isAvailable": true,
+      "title": "The Legend of Zelda: Breath of the Wild",
+      "genre": "Action-Adventure",
+      "releaseDate": "Mar 3, 2017, 12:00:00 AM",
+      "ID": 1
+    },
+    {
+      "platform": "Rockstar Games",
+      "publisher": "Dan Houser",
+      "isAvailable": true,
+      "title": "Red Dead Redemption 2",
+      "genre": "Action-Adventure",
+      "releaseDate": "Oct 26, 2018, 12:00:00 AM",
+      "ID": 2
+    },
+    {
+      "platform": "CD Projekt",
+      "publisher": "Konrad Tomaszkiewicz",
+      "isAvailable": true,
+      "title": "The Witcher 3: Wild Hunt",
+      "genre": "Action-RPG",
+      "releaseDate": "May 19, 2015, 12:00:00 AM",
+      "ID": 3
+    },
+    {
+      "platform": "Nintendo",
+      "publisher": "Kenta Motokura",
+      "isAvailable": true,
+      "title": "Super Mario Odyssey",
+      "genre": "Platformer",
+      "releaseDate": "Oct 27, 2017, 12:00:00 AM",
+      "ID": 4
+    },
+    {
+      "platform": "Santa Monica Studio",
+      "publisher": "Cory Barlog",
+      "isAvailable": true,
+      "title": "God of War (2018)",
+      "genre": "Action-Adventure",
+      "releaseDate": "Apr 20, 2018, 12:00:00 AM",
+      "ID": 5
+    },
+    {
+      "platform": "Rockstar Games",
+      "publisher": "Aaron Garbut",
+      "isAvailable": true,
+      "title": "Grand Theft Auto V",
+      "genre": "Action-Adventure",
+      "releaseDate": "Sep 17, 2013, 12:00:00 AM",
+      "ID": 6
+    },
+    {
+      "platform": "Mojang Studios",
+      "publisher": "Markus Persson",
+      "isAvailable": true,
+      "title": "Minecraft",
+      "genre": "Sandbox",
+      "releaseDate": "Nov 18, 2011, 12:00:00 AM",
+      "ID": 7
+    },
+    {
+      "platform": "Naughty Dog",
+      "publisher": "Neil Druckmann",
+      "isAvailable": true,
+      "title": "The Last of Us Part II",
+      "genre": "Action-Adventure",
+      "releaseDate": "Jun 19, 2020, 12:00:00 AM",
+      "ID": 8
+    },
+    {
+      "platform": "Bethesda Game Studios",
+      "publisher": "Todd Howard",
+      "isAvailable": true,
+      "title": "Fallout 4",
+      "genre": "Action-RPG",
+      "releaseDate": "Nov 10, 2015, 12:00:00 AM",
+      "ID": 9
+    },
+    {
+      "platform": "Ubisoft Montreal",
+      "publisher": "Ashraf Ismail",
+      "isAvailable": true,
+      "title": "Assassin\u0027s Creed Valhalla",
+      "genre": "Action-Adventure",
+      "releaseDate": "Nov 10, 2020, 12:00:00 AM",
+      "ID": 10
+    }
+  ],
+  "movies": [
+    {
+      "director": "Christopher Nolan",
+      "cast": "Leonardo DiCaprio, Joseph Gordon-Levitt",
+      "isAvailable": true,
+      "title": "Inception",
+      "genre": "Sci-Fi",
+      "releaseDate": "Jul 16, 2010, 12:00:00 AM",
+      "ID": 1
+    },
+    {
+      "director": "Frank Darabont",
+      "cast": "Tim Robbins, Morgan Freeman",
+      "isAvailable": true,
+      "title": "The Shawshank Redemption",
+      "genre": "Drama",
+      "releaseDate": "Sep 23, 1994, 12:00:00 AM",
+      "ID": 2
+    },
+    {
+      "director": "Christopher Nolan",
+      "cast": "Christian Bale, Heath Ledger",
+      "isAvailable": true,
+      "title": "The Dark Knight",
+      "genre": "Action",
+      "releaseDate": "Jul 18, 2008, 12:00:00 AM",
+      "ID": 3
+    },
+    {
+      "director": "Quentin Tarantino",
+      "cast": "John Travolta, Uma Thurman",
+      "isAvailable": true,
+      "title": "Pulp Fiction",
+      "genre": "Crime",
+      "releaseDate": "Oct 14, 1994, 12:00:00 AM",
+      "ID": 4
+    },
+    {
+      "director": "Francis Ford Coppola",
+      "cast": "Marlon Brando, Al Pacino",
+      "isAvailable": true,
+      "title": "The Godfather",
+      "genre": "Crime",
+      "releaseDate": "Mar 24, 1972, 12:00:00 AM",
+      "ID": 5
+    },
+    {
+      "director": "DavID Fincher",
+      "cast": "Brad Pitt, Edward Norton",
+      "isAvailable": true,
+      "title": "Fight Club",
+      "genre": "Drama",
+      "releaseDate": "Oct 15, 1999, 12:00:00 AM",
+      "ID": 6
+    },
+    {
+      "director": "Lana Wachowski, Lilly Wachowski",
+      "cast": "Keanu Reeves, Laurence Fishburne",
+      "isAvailable": true,
+      "title": "The Matrix",
+      "genre": "Sci-Fi",
+      "releaseDate": "Mar 31, 1999, 12:00:00 AM",
+      "ID": 7
+    },
+    {
+      "director": "Robert Zemeckis",
+      "cast": "Tom Hanks, Robin Wright",
+      "isAvailable": true,
+      "title": "Forrest Gump",
+      "genre": "Drama",
+      "releaseDate": "Jul 6, 1994, 12:00:00 AM",
+      "ID": 8
+    },
+    {
+      "director": "Peter Jackson",
+      "cast": "Elijah Wood, Ian McKellen",
+      "isAvailable": true,
+      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "genre": "Fantasy",
+      "releaseDate": "Dec 19, 2001, 12:00:00 AM",
+      "ID": 9
+    },
+    {
+      "director": "Joss Whedon",
+      "cast": "Robert Downey Jr., Chris Evans",
+      "isAvailable": true,
+      "title": "The Avengers",
+      "genre": "Action",
+      "releaseDate": "Apr 11, 2012, 12:00:00 AM",
+      "ID": 10
+    }
+  ]
+}

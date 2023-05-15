@@ -1,3 +1,5 @@
+package org.example;
+
 import java.util.ArrayList;
 
 public class RentalStore {
@@ -68,9 +70,11 @@ public class RentalStore {
         String ID = Long.toString(movie.ID) + Long.toString(customer.ID);
         long castID = Long.parseLong(ID);
         if (movie.isAvailable == true) {
-            Rental rental = new Rental(movie, customer, castID);
-            rentalList.add(rental);
+            rentalList.add(new Rental(movie, customer, castID));
             System.out.println(movie.getTitle() + " rented");
+        }
+        else{
+            System.out.println("this movie \"" + movie.getTitle() +"\" has been rented by another one and it's not available");
         }
     }
 
@@ -85,7 +89,11 @@ public class RentalStore {
         if (book.isAvailable == true) {
             Rental rental = new Rental(book, customer, castID);
             rentalList.add(rental);
+            customer.addRent(rental);
             System.out.println(book.getTitle() + " rented");
+        }
+        else{
+            System.out.println("this book \"" + book.getTitle() +"\" has been rented by another one and it's not available");
         }
     }
 
@@ -98,9 +106,11 @@ public class RentalStore {
         String ID = Long.toString(game.ID) + Long.toString(customer.ID);
         long castID = Long.parseLong(ID);
         if (game.isAvailable == true) {
-            Rental rental = new Rental(game, customer, castID);
-            rentalList.add(rental);
+            rentalList.add(new Rental(game, customer, castID));
             System.out.println(game.getTitle() + " rented");
+        }
+        else{
+            System.out.println("this game \""+game.getTitle() + "\" has been rented by another one and it's not available");
         }
     }
 

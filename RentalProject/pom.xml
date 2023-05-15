@@ -7,7 +7,15 @@
     <groupId>org.example</groupId>
     <artifactId>RentalSystem</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <dependencies>
 
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10.1</version>
+        </dependency>
+
+    </dependencies>
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>

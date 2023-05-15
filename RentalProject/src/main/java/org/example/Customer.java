@@ -1,3 +1,6 @@
+
+package org.example;
+
 import java.util.ArrayList;
 
 public class Customer {
@@ -6,7 +9,7 @@ public class Customer {
     public String email;
     public String phone;
     public String address;
-    public ArrayList<Rental> rentals;
+    public ArrayList<Rental> rentals ;
 
     public Customer(String name, String email, String phone, String address, long ID) {
         this.ID = ID;
@@ -14,7 +17,7 @@ public class Customer {
         this.email = email;
         this.phone = phone;
         this.address = address;
-        this.rentals = new ArrayList<>();
+        rentals = new ArrayList<>();
     }
 
     public long getID() {
@@ -37,12 +40,16 @@ public class Customer {
         return address;
     }
 
+    public void setRentals(ArrayList<Rental> rentals) {
+        this.rentals = rentals;
+    }
+
     public ArrayList<Rental> getRentals() {
-        System.out.println(this.name + " rent these item :");
+        System.out.println("****** " + this.name + " rent these item :" + " ******");
         rentals = new ArrayList<>();
         int i = 1;
         for (Rental temp : RentalStore.rentalList) {
-            if (temp.customer.ID == this.ID) {
+            if (temp.customer.ID== this.ID) {
                 rentals.add(temp);
                 if (temp.movie == null && temp.game == null)
                     System.out.println(i + ". the book : " + temp.book.title);
@@ -54,5 +61,11 @@ public class Customer {
             }
         }
         return rentals;
+    }
+
+    public void addRent(Rental rental) {
+        if(rentals== null)
+               rentals = new ArrayList<>();
+        rentals.add(rental);
     }
 }
